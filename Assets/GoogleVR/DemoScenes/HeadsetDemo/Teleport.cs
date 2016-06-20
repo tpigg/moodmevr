@@ -21,7 +21,7 @@ public class Teleport : MonoBehaviour, IGvrGazeResponder {
 
   void Start() {
     startingPosition = transform.localPosition;
-    SetGazedAt(false);
+    //SetGazedAt(false);
   }
 
   void LateUpdate() {
@@ -32,7 +32,7 @@ public class Teleport : MonoBehaviour, IGvrGazeResponder {
   }
 
   public void SetGazedAt(bool gazedAt) {
-    GetComponent<Renderer>().material.color = gazedAt ? Color.green : Color.red;
+		GetComponent<Renderer> ().material.color = gazedAt ? Color.green : Color.white;
   }
 
   public void Reset() {
