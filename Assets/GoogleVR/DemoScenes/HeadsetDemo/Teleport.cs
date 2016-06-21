@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 [RequireComponent(typeof(Collider))]
@@ -22,6 +23,8 @@ public class Teleport : MonoBehaviour, IGvrGazeResponder {
   void Start() {
     startingPosition = transform.localPosition;
     //SetGazedAt(false);
+		print("== == == MoodMe: Application.streamingAssetsPath: " + Application.streamingAssetsPath);
+		Debug.Log("== == == MoodMe: Application.streamingAssetsPath: " + Application.streamingAssetsPath);
   }
 
   void LateUpdate() {
@@ -85,12 +88,11 @@ public class Teleport : MonoBehaviour, IGvrGazeResponder {
 
   /// Called when the viewer's trigger is used, between OnGazeEnter and OnGazeExit.
   public void OnGazeTrigger() {
-    //TeleportRandomly();
-	switchMood ();
+    TeleportRandomly();
   }
 
-  public void switchMood() {
-	Application.LoadLevel (1);
+  public void switchMood(string mood) {
+	SceneManager.LoadScene (1);
   }
 
 

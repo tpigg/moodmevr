@@ -263,7 +263,8 @@ public class MediaPlayerCtrl : MonoBehaviour {
 				else
 				{
 					//Call_Load(strName,0);
-					StartCoroutine( CopyStreamingAssetVideoAndLoad(strName));
+					StartCoroutine( CopyStreamingAssetVideoAndLoad(strName)); 
+					//Load("file://" + Application.persistentDataPath + "/" + strName); //TODO: this is a hack added by Nisa, clean later
 				}
 				
 			}
