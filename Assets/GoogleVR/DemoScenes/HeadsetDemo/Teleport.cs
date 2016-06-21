@@ -23,8 +23,6 @@ public class Teleport : MonoBehaviour, IGvrGazeResponder {
   void Start() {
     startingPosition = transform.localPosition;
     //SetGazedAt(false);
-		print("== == == MoodMe: Application.streamingAssetsPath: " + Application.streamingAssetsPath);
-		Debug.Log("== == == MoodMe: Application.streamingAssetsPath: " + Application.streamingAssetsPath);
   }
 
   void LateUpdate() {
