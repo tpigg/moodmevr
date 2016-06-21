@@ -86,11 +86,12 @@ public class Teleport : MonoBehaviour, IGvrGazeResponder {
 
   /// Called when the viewer's trigger is used, between OnGazeEnter and OnGazeExit.
   public void OnGazeTrigger() {
-    TeleportRandomly();
+    //TeleportRandomly();
+	switchMood ("energy_and_focus");
   }
 
   public void switchMood(string mood) {
-	SceneManager.LoadScene (1);
+	Application.LoadLevel (1);
   }
 
 
